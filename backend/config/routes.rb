@@ -13,7 +13,6 @@ Rails.application.routes.draw do
       resources :challenges do
         member do
           patch "update_title"
-          put "update"
         end
       end
     end
