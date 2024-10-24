@@ -10,7 +10,12 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :challenges
+      resources :challenges do
+        member do
+          patch "update_title"
+          put "update"
+        end
+      end
     end
   end
 end
